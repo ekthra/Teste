@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanato Romântico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .date-ideas-section {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .date-idea-card {
+            background: #fedcdb;
+            border-radius: 22px;
+            box-shadow: 0 2px 12px rgba(168,0,56,0.07);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .date-idea-icon {
+            font-size: 2.5rem;
+            color: #a80038;
+            min-width: 60px;
+            text-align: center;
+        }
+        .date-idea-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #a80038;
+            margin-bottom: 0.2rem;
+        }
+        .date-idea-desc {
+            color: #333;
+            font-size: 1rem;
+        }
+        body, .valentine-bg {
+            background: #fae7e7;
+        }
+        @media (max-width: 600px) {
+            .date-idea-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .date-idea-icon {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="valentine-bg py-5">
+        <div class="container date-ideas-section">
+            <h1 class="valentine-title text-center mb-2">Artesanato Romântico</h1>
+            <p class="valentine-subtitle text-center mb-4">Presentes únicos com nossas próprias mãos</p>
+
+            <div class="date-idea-card">
+                <div class="date-idea-icon"><img src="imagens/logoartesanato1.jpg" alt="Logo Cartões Artesanais" class="valentine-logo"></div>
+                <div>
+                    <div class="date-idea-title">Decoração</div>
+                    <div class="date-idea-desc">Crie uma decoração especial
+                    </div>
+                </div>
+            </div>
+            <div class="date-idea-card">
+                <div class="date-idea-icon"><img src="imagens/logoartesanato2.jpg" alt="Logo Potes de Mensagens" class="valentine-logo"></div>
+                <div>
+                    <div class="date-idea-title">Cartões Artesanais</div>
+                    <div class="date-idea-desc">Expresse seu amor com um cartão feito à mão</div>
+                </div>
+            </div>
+            <div class="date-idea-card">
+                <div class="date-idea-icon"><img src="imagens/logoartesanato3.jpg" alt="Logo Decoração com Fotos" class="valentine-logo"></div>
+                <div>
+                    <div class="date-idea-title">Potes de Mensagens</div>
+                    <div class="date-idea-desc">Preencha com bilhetinhos de amor e carinho</div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="index.html" class="btn valentine-btn">Voltar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

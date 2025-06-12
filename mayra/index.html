@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia dos Namorados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="valentine-bg">
+        <div class="container py-5">
+            <header class="text-center mb-4">
+                <h1 class="valentine-title">Dia dos Namorados</h1>
+                <p class="valentine-subtitle">Eu e Você</p>
+            </header>
+
+            <!-- Carrossel Polaroid -->
+            <div class="polaroid-carousel d-flex justify-content-center align-items-center mb-5">
+                <button class="carousel-arrow left" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
+                <div class="polaroid-wrapper d-flex">
+                    <div class="polaroid polaroid-left">
+                        <img src="imagens/imagem1.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="polaroid polaroid-center">
+                        <img src="imagens/imagem2.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="polaroid polaroid-right">
+                        <img src="imagens/imagem3.jpg" alt="Imagem 3">
+                    </div>
+                </div>
+                <button class="carousel-arrow right" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <section class="text-center mb-5">
+                <h2 class="romantic-title">Tudo que você sempre quis</h2>
+            </section>
+
+            <!-- Cards -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="gift-guides.html" class="valentine-card text-decoration-none">
+                        <img src="imagens/logo1.jpg" alt="Logo Dicas de Presentes" class="valentine-logo">
+                        <h5>Presentes Desejados</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="date-ideas.html" class="valentine-card text-decoration-none">
+                        <img src="imagens/logo2.jpg" alt="Logo Ideias de Encontro" class="valentine-logo">
+                        <h5>Ideias de Encontro</h5>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="romantic-crafts.html" class="valentine-card text-decoration-none">
+                        <img src="imagens/logo3.jpg" alt="Logo Artesanato Romântico" class="valentine-logo">
+                        <h5>Artesanato Romântico</h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="learn-more.html" class="btn valentine-btn">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carrossel.js"></script>
+</body>
+</html>
+
+<!-- Modal para expandir a imagem -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Detalhes da Imagem</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" class="img-fluid" id="expandedImage" alt="Imagem Expandida">
+            </div>
+        </div>
+    </div>
+</div>

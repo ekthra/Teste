@@ -1,0 +1,242 @@
+body, .valentine-bg {
+    background: #fae7e7;
+    min-height: 100vh;
+}
+
+.valentine-title {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #a80038;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.valentine-subtitle {
+    font-size: 1.3rem;
+    color: #7a2f4d;
+    margin-bottom: 2rem;
+}
+
+.romantic-title {
+    color: #a80038;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+/* Polaroid Carousel */
+.polaroid-carousel {
+    position: relative;
+    gap: 1.5rem;
+}
+
+.polaroid-wrapper {
+    gap: 1.5rem;
+}
+
+.polaroid {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(168,0,56,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 230px;
+    position: relative;
+    transition: transform 0.3s;
+    padding: 0;
+    box-sizing: border-box;
+}
+.polaroid img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 6px;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #eee;
+    display: block;
+    transition: opacity 0.4s, transform 0.4s;
+    opacity: 1;
+    cursor: pointer;
+}
+.polaroid img:hover {
+    transform: scale(1.05); /* Pequeno zoom ao passar o mouse */
+}
+.polaroid img.fade-anim {
+    opacity: 0;
+}
+.polaroid-center img.zoom-anim {
+    transform: scale(1.15);
+}
+.polaroid-left {
+    transform: rotate(-7deg) translateY(20px);
+    z-index: 1;
+}
+.polaroid-center {
+    transform: scale(1.1) translateY(-10px);
+    z-index: 2;
+    box-shadow: 0 12px 32px rgba(168,0,56,0.15), 0 2px 8px rgba(0,0,0,0.10);
+}
+.polaroid-right {
+    transform: rotate(7deg) translateY(20px);
+    z-index: 1;
+}
+
+.carousel-arrow {
+    background: #fff;
+    border: 2px solid #ffb6d5;
+    color: #a80038;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(168,0,56,0.08);
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+.carousel-arrow:hover {
+    background: #ffb6d5;
+    color: #fff;
+}
+
+/* Cards */
+.valentine-card,
+.valentine-card.text-decoration-none {
+    background: #ffd7df;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(168,0,56,0.08);
+    padding: 2rem 1rem 1.2rem 1rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 170px;
+    color: #a80038;
+    text-decoration: none !important;
+    display: block;
+    cursor: pointer;
+}
+.valentine-card.text-decoration-none:visited {
+    color: #a80038;
+}
+.valentine-card.text-decoration-none:hover,
+.valentine-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(168,0,56,0.13);
+    background: #ffe6ef;
+    color: #a80038;
+    text-decoration: none;
+}
+.valentine-card.text-decoration-none h5,
+.valentine-card.text-decoration-none i {
+    color: #a80038;
+}
+
+/* Botão */
+.valentine-btn {
+    background: #a80038;
+    color: #fff;
+    border-radius: 30px;
+    padding: 0.7rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(168,0,56,0.10);
+    transition: background 0.2s;
+}
+.valentine-btn:hover {
+    background: #e75480;
+    color: #fff;
+}
+
+/* Corações decorativos */
+.valentine-bg::before, .valentine-bg::after {
+    content: "\f004 \f004 \f004";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #ffb6d5;
+    font-size: 2.5rem;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.25;
+}
+.valentine-bg::before {
+    top: 40px;
+    left: 10vw;
+    transform: rotate(-15deg);
+}
+.valentine-bg::after {
+    bottom: 40px;
+    right: 10vw;
+    transform: rotate(10deg);
+}
+
+/* Coração fofo animado */
+.cute-heart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 2rem;
+    color: #e75480;
+    opacity: 0.85;
+    pointer-events: none;
+    animation: heart-pop 0.8s ease;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1);
+}
+@keyframes heart-pop {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+    50% { opacity: 1; transform: translate(-50%, -60%) scale(1.2); }
+    100% { opacity: 0; transform: translate(-50%, -80%) scale(1.5); }
+}
+
+@media (max-width: 900px) {
+    .polaroid-wrapper {
+        gap: 0.5rem;
+    }
+    .polaroid {
+        width: 120px;
+        height: 160px;
+    }
+    .polaroid img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px) {
+    .valentine-title {
+        font-size: 2rem;
+    }
+    .romantic-title {
+        font-size: 1.2rem;
+    }
+    .polaroid {
+        width: 80px;
+        height: 100px;
+        padding: 0.2rem 0.2rem 0.7rem 0.2rem;
+    }
+    .polaroid img {
+        width: 60px;
+        height: 60px;
+    }
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+.valentine-logo {
+    display: block;
+    margin: 0 auto 0.7rem auto;
+    max-width: 120px;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+} 
